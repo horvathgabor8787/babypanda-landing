@@ -275,50 +275,55 @@ body { @apply bg-neutral-950 text-neutral-100; }
   border-color:#E1A4EF !important;
   box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
-.theme-rose .btn-primary:hover { transform: translateY(-1px) scale(1.03); }
-/* ===== Shimmer / fénycsík a címekre ===== */
-.sweep {
+/* ===== Kékes fényhullám a címek végén ===== */
+:root{
+  --wave-blue1: #7da4ff;
+  --wave-blue2: #a7c2ff;
+  --wave-mix:   #E1A4EF; /* brand lilás fény, hogy szépen összeolvadjon */
+}
+
+.title-wave{
   position: relative;
-  display: inline-block;            /* hogy a csík a szöveg szélességén fusson */
-  isolation: isolate;               /* blend ne folyjon ki */
+  display: inline-block;
+  isolation: isolate;
 }
 
-.sweep::after {
-  content: "";
+/* Fényhullám a cím JOBB oldalán (a szöveg végén) */
+.title-wave::after{
+  content:"";
   position: absolute;
-  inset: -10% -20%;                 /* kicsit nagyobbra, hogy szépen „bejöjjön” */
-  width: 28%;
-  background: linear-gradient(
-    70deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,.25) 40%,
-    rgba(255,255,255,.85) 50%,
-    rgba(255,255,255,.25) 60%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: translateX(-130%) skewX(-15deg);
-  animation: sweep-move 3.8s ease-in-out infinite;
-  mix-blend-mode: screen;           /* világosítja a szöveget → fényvillanás */
+  right: -6%;
+  top: -22%;
+  width: clamp(140px, 34%, 360px);
+  height: 150%;
   pointer-events: none;
+  border-radius: 50%;
+  /* több réteg: belső kék villanás + lilás átmenet + finom csíkok */
+  background:
+    radial-gradient(110% 85% at 0% 55%, rgba(125,164,255,.75) 0%, rgba(125,164,255,.35) 36%, transparent 70%),
+    radial-gradient(80% 60%  at 15% 35%, rgba(167,194,255,.55), transparent 60%),
+    radial-gradient(95% 75%  at 5% 70%,  rgba(225,164,239,.35), transparent 68%),
+    linear-gradient(95deg, transparent 0 40%, rgba(255,255,255,.28) 50%, transparent 65%);
+  filter: blur(8px) saturate(115%);
+  mix-blend-mode: screen; /* sötét és világos hátteren is fényként viselkedik */
+  z-index: -1;            /* a szöveg alatt marad */
 }
 
-/* változatok (opcionális) */
-.sweep.slower::after { animation-duration: 5.2s; }
-.sweep.delay-1::after { animation-delay: .8s; }
-.sweep.delay-2::after { animation-delay: 1.6s; }
-
-@keyframes sweep-move {
-  0%   { transform: translateX(-130%) skewX(-15deg); }
-  60%  { transform: translateX(130%)  skewX(-15deg); }
-  100% { transform: translateX(130%)  skewX(-15deg); }
+/* Enyhe “élés” animáció (opcionális) */
+.title-wave.wave-animate::after{
+  animation: wave-drift 6s ease-in-out infinite;
+}
+@keyframes wave-drift{
+  0%,100% { transform: translateX(0) scale(1); opacity:.95; }
+  50%     { transform: translateX(8px) scale(1.02); opacity:1; }
 }
 
-/* ha a felhasználó csökkentett animációt kér */
-@media (prefers-reduced-motion: reduce) {
-  .sweep::after { animation: none; display: none; }
+/* Ha a felhasználó csökkentett animációt kér, ne mozogjon */
+@media (prefers-reduced-motion: reduce){
+  .title-wave.wave-animate::after{ animation: none; }
 }
 
-/* Rose témán egy leheletnyit erősebb, hogy kijöjjön a fény a rózsaszínen */
-.theme-rose .sweep::after {
-  filter: drop-shadow(0 2px 6px rgba(255,255,255,.35));
+/* Rose témán kicsit erősebb glow, hogy ne vesszen el a rózsaszínben */
+.theme-rose .title-wave::after{
+  filter: blur(9px) drop-shadow(0 6px 18px rgba(125,164,255,.25));
 }
