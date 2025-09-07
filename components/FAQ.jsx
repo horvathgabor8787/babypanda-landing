@@ -23,7 +23,9 @@ export default function FAQ() {
   const [open, setOpen] = useState(null);
   return (
     <section className="relative mt-16">
-      <h2 className="text-2xl md:text-3xl font-extrabold mb-4 shine-text">Gyakori kérdések</h2>
+      <h2 className="sweep text-2xl md:text-3xl font-extrabold shine-text">
+    Gyakori kérdések
+  </h2>
       <div className="divide-y divide-white/10">
         {FAQS.map((f, i) => (
           <div key={f.q} className="faq-item">
