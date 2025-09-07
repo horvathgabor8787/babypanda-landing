@@ -182,3 +182,28 @@ body { @apply bg-neutral-950 text-neutral-100; }
 .delay-1500 { animation-delay: 1.5s; }
 .delay-2000 { animation-delay: 2s; }
 .delay-2500 { animation-delay: 2.5s; }
+/* ===== Rose theme (próbaváltás a fekete helyett) ===== */
+.theme-rose { 
+  background-color: #e4a1af;
+}
+
+/* A grid sötét vonalakkal jobb világos alapon */
+.theme-rose .bg-grid::after{
+  background-image:
+    linear-gradient(#00000014 1px, transparent 1px),
+    linear-gradient(90deg, #00000014 1px, transparent 1px);
+  /* enyhébb vignetta világos háttéren */
+  mask-image: radial-gradient(ellipse at 50% 20%, rgba(0,0,0,.35), transparent 70%);
+}
+
+/* A háttér ikonok világos alapon “multiply”-jal szebbek és kicsit erősebbek */
+.theme-rose .sticker {
+  mix-blend-mode: multiply;
+  opacity: .22;                   /* picit erősebb, hogy ne vesszen el */
+  filter: drop-shadow(0 6px 16px rgba(225,164,239,0.25));
+}
+
+/* Opcionális: kicsit gyengébb sötét perem, hogy ne legyen túl komor a szélen */
+.theme-rose .vignette { 
+  box-shadow: inset 0 0 120px 60px rgba(0,0,0,.35);
+}
