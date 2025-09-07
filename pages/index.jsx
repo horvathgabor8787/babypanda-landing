@@ -90,7 +90,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative z-10 pt-16 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="hero-title text-3xl sm:text-4xl md:text-6xl font-extrabold shine-text">
+          <h1 className="sweep hero-title text-3xl sm:text-4xl md:text-6xl font-extrabold shine-text">
             Névre szóló ajándék – csak neki
           </h1>
           <p className="mt-4 text-base md:text-lg text-neutral-300 max-w-prose mx-auto">
@@ -106,7 +106,7 @@ export default function Home() {
 
       {/* CATEGORIES – ZigZag storytelling */}
       <section className="relative z-10 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 shine-text">
+       <h2 className="sweep text-2xl md:text-3xl font-extrabold mb-2 shine-text">
           Válaszd ki a stílusát, mi adjuk a varázst
         </h2>
         <ZigZagCategory items={categories} />
@@ -131,7 +131,7 @@ export default function Home() {
                 Nézd meg, mit ajánl a kalkulátor a baba nevéhez
               </h3>
               <span className="text-accent hidden sm:block">
-                Holografikus console
+                
               </span>
             </div>
             <iframe
@@ -165,7 +165,7 @@ export default function Home() {
       {/* FINAL CTA */}
       <section className="relative z-10 mt-16 px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold shine-text">
+          <h2 className="sweep text-2xl md:text-3xl font-extrabold shine-text">
             Válaszd ki most az egyedi ajándékot
           </h2>
           <p className="mt-3 text-neutral-300">
