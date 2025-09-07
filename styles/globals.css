@@ -366,3 +366,21 @@ body { @apply bg-neutral-950 text-neutral-100; }
 .theme-rose .title-wave::after{
   filter: blur(9px) drop-shadow(0 6px 18px rgba(125,164,255,.25));
 }
+:root{ --neon:#7DA4FF; } /* a kékes fény színe */
+
+.shine-text {
+  background: linear-gradient(90deg,
+    #111 0, #111 30%,
+    var(--neon) 50%, #fff 52%, var(--neon) 54%,
+    #111 70%, #111 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
