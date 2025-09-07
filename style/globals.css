@@ -1,0 +1,18 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+*,*::before,*::after{box-sizing:border-box} html,body,#__next{height:100%} html{scroll-behavior:smooth}
+body{@apply bg-white text-gray-900 antialiased} img{display:block;max-width:100%;height:auto}
+.section{@apply py-10 md:py-16} .container{@apply max-w-6xl mx-auto px-4} .subtle{@apply text-gray-600}
+.spotlight{position:fixed;inset:0;pointer-events:none;z-index:50;background:radial-gradient(420px 420px at var(--mx,50%) var(--my,50%), rgba(225,164,239,.22), transparent 60%);mix-blend-mode:screen}
+.hero-title{@apply font-semibold tracking-tight}
+.card{@apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden;transition:transform .18s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.card-media{width:100%;height:240px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,0))}
+.card-media>img{width:100%;height:100%;object-fit:contain;object-position:center}
+.btn-black{@apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold; background:#000; color:#E1A4EF; border:1px solid rgba(255,255,255,.08); box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.btn-black:hover{filter:brightness(1.05); transform:translateY(-1px)} .btn-black .dot{@apply text-base}
+.platform-row{display:flex;flex-wrap:wrap;gap:12px}
+.platform-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:.75rem;border:1px solid #e5e7eb;font-weight:600}
+.share-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:.75rem;background:#000;color:#E1A4EF;border:1px solid rgba(255,255,255,.08)}
+.share-btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.ig-gradient{background:linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4)}
+.anchor-offset{scroll-margin-top:88px}
