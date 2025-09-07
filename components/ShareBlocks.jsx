@@ -17,7 +17,7 @@ export default function ShareBlocks({ shareUrl, pinterestMedia, text = "Nézd me
   return (
     <section className="relative mt-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="title-wave wave-animate text-2xl md:text-3xl font-extrabold mb-6 shine-text">
+        <h2 className="shine-text text-2xl md:text-3xl font-extrabold mb-6 shine-text">
           Oszd meg a varázslatot
         </h2>
 
