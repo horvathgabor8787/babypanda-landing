@@ -30,7 +30,7 @@ export default function ZigZagCategory({ items = [] }) {
                   <h3 className="text-xl md:text-2xl font-extrabold mb-3">{it.title}</h3>
                   <p className="text-neutral-300 mb-4">{it.desc}</p>
                   <PrimaryButton href={it.href} target="_blank" rel="noopener noreferrer">
-                    Fedezd fel →
+                    Válaszd ki
                   </PrimaryButton>
                 </div>
               </div>
