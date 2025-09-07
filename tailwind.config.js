@@ -1,2 +1,0 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = { content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}"], theme: { extend: { colors: { pandaNude:"#C29A8E", pandaAccent:"#E1A4EF" } } }, plugins: [] };
