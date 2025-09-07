@@ -107,7 +107,7 @@ export default function Home() {
       {/* CATEGORIES – ZigZag storytelling */}
       <section className="relative z-10 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-extrabold mb-4 shine-text">
-          Fedezd fel fő kategóriáinkat
+          Válaszd ki a stílusát, mi adjuk a varázst
         </h2>
         <ZigZagCategory items={categories} />
       </section>
