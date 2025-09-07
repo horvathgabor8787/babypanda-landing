@@ -9,10 +9,10 @@ export default function ZigZagCategory({ items = [] }) {
           const leftImage = idx % 2 === 0;
           return (
             <div key={it.title} className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              {/* Image side (KOMPakt méret, középre igazítva) */}
+              {/* Kép oldal – kompakt, középre igazított */}
               <div className={leftImage ? "" : "md:order-2"}>
                 <div className="holo-border p-2 mx-auto w-full max-w-md md:max-w-lg">
-                  <div className="img-wrap w-full h-56 md:h-72">
+                  <div className="img-wrap w-full cat-img">
                     <Image
                       src={it.image}
                       alt={it.title}
@@ -24,7 +24,7 @@ export default function ZigZagCategory({ items = [] }) {
                 </div>
               </div>
 
-              {/* Text side */}
+              {/* Szöveg oldal */}
               <div className={leftImage ? "" : "md:order-1"}>
                 <div className="mx-auto w-full max-w-md">
                   <h3 className="text-xl md:text-2xl font-extrabold mb-3">{it.title}</h3>
