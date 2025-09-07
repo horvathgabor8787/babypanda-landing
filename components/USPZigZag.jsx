@@ -27,7 +27,7 @@ export default function USPZigZag() {
   return (
     <section className="relative mt-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-extrabold mb-5 shine-text">Miért minket válassz?</h2>
+        <h2 className="title-wave wave-animate text-2xl md:text-3xl font-extrabold mb-5 shine-text">Miért minket válassz?</h2>
 
         {/* Kicsi, kompakt kártyák – ikon + szöveg */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
