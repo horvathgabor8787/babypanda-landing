@@ -1,44 +1,52 @@
+import { Sparkles, BadgeCheck, ShieldCheck, Gift } from "lucide-react";
+
 export default function USPZigZag() {
   const items = [
     {
+      icon: Sparkles,
       title: "Csak neki készül",
-      text: "Minden ajándék névre szóló – nem tömegcikk, hanem személyes élmény, amire mindenki emlékezni fog."
+      text: "Minden ajándék névre szóló – személyes élmény, nem tömegcikk."
     },
     {
-      title: "Holografikus csomagolás élmény",
-      text: "Prémium, látványos megjelenés már a kicsomagolás pillanatától. Egyedi élmény a kezdetektől."
+      icon: Gift,
+      title: "Emlékezetes meglepetés",
+      text: "Ajándék, amire mindenki emlékezni fog – első pillanattól különleges."
     },
     {
-      title: "Gyors és egyszerű rendelés",
-      text: "Válaszd ki, rendeld meg – ennyi. A személyességet mi vállaljuk, te pedig begyűjtöd a mosolyokat."
+      icon: BadgeCheck,
+      title: "Gyors, egyszerű rendelés",
+      text: "Válaszd ki és rendeld meg – a személyességet mi hozzátesszük."
     },
     {
-      title: "Minőség, ami kitűnik",
-      text: "Nem a mennyiség, hanem az egyediség számít. Ajándék, ami kiemel a tömegből."
+      icon: ShieldCheck,
+      title: "Minőség és biztonság",
+      text: "Gondosan válogatott, bababarát alapanyagokkal dolgozunk."
     }
   ];
+
   return (
-    <section className="relative mt-16 space-y-12">
-      {items.map((x, i) => (
-        <div key={x.title} className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          <div className={i % 2 === 0 ? "" : "md:order-2"}>
-            <div className="holo-border p-6 glow-card">
-              <h3 className="text-xl md:text-2xl font-extrabold mb-3">{x.title}</h3>
-              <p className="text-neutral-300">{x.text}</p>
-            </div>
-          </div>
-          <div className={i % 2 === 0 ? "" : "md:order-1"}>
-            <div className="holo-border p-2">
-              <div className="img-wrap aspect-[4/3]">
-                <div className="w-full h-full flex items-center justify-center">
-                  {/* Holografikus placeholder illusztráció */}
-                  <div className="w-2/3 h-2/3 rounded-xl bg-gradient-to-tr from-accent/40 via-white/20 to-sky-300/40 animate-pulse-soft" />
-                </div>
+    <section className="relative mt-16">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-extrabold mb-5 shine-text">Miért minket válassz?</h2>
+
+        {/* Kicsi, kompakt kártyák – ikon + szöveg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {items.map(({ icon: Icon, title, text }) => (
+            <div
+              key={title}
+              className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 flex items-start gap-3"
+            >
+              <span className="shrink-0 mt-1 rounded-lg bg-black/50 border border-white/10 p-2">
+                <Icon size={18} className="text-accent" />
+              </span>
+              <div>
+                <p className="font-semibold">{title}</p>
+                <p className="text-sm text-neutral-300">{text}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }
