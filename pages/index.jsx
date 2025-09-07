@@ -66,7 +66,6 @@ export default function Home() {
       {/* HERO */}
       <section className="relative z-10 pt-16 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-         <h1 className="text-4xl md:text-6xl font-extrabold shine-text">
          <h1 className="hero-title text-3xl sm:text-4xl md:text-6xl font-extrabold shine-text">
           <p className="mt-4 text-base md:text-lg text-neutral-300 max-w-prose mx-auto">
             Ne adj át tömegcikket. Lepd meg őt olyan ajándékkal, ami <strong>egyedi</strong>, <strong>személyes</strong> és <strong>emlékezetes</strong>.
