@@ -5,6 +5,7 @@ import USPZigZag from "@/components/USPZigZag";
 import TopProducts from "@/components/TopProducts";
 import ShareBlocks from "@/components/ShareBlocks";
 import FAQ from "@/components/FAQ";
+import BackgroundStickers from "@/components/BackgroundStickers";
 
 export default function Home() {
   const shareUrl =
@@ -83,7 +84,9 @@ export default function Home() {
       {/* Background layers */}
       <div className="absolute inset-0 bg-animated" />
       <span className="bg-grid absolute inset-0" />
-
+      {/* Holografikus babás/prémium ikonréteg (#E1A4EF) */}
+      <BackgroundStickers />
+      
       {/* HERO */}
       <section className="relative z-10 pt-16 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
