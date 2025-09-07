@@ -107,3 +107,30 @@ body { @apply bg-neutral-950 text-neutral-100; }
 
 /* Utility */
 .max-w-prose { max-width: 65ch; }
+/* ===== Mobile finomhangolás ===== */
+
+/* Képkeret középre igazítás biztos ami biztos */
+.img-wrap { display: flex; align-items: center; justify-content: center; }
+.img-fit  { object-fit: contain; object-position: center; }
+
+/* Kategória képek kompakt magassága */
+@media (max-width: 360px) {
+  .cat-img { height: 11rem; } /* ~176px */
+}
+@media (min-width: 361px) and (max-width: 767px) {
+  .cat-img { height: 13rem; } /* ~208px */
+}
+@media (min-width: 768px) {
+  .cat-img { height: 18rem; } /* ~288px */
+}
+
+/* Kalkulátor iframe responsív magasság */
+.calc-frame { height: 60vh; min-height: 420px; }
+@media (min-width: 768px) {
+  .calc-frame { height: 75vh; min-height: 520px; }
+}
+
+/* Hero cím még biztonságosabb tördelése nagyon keskeny kijelzőn */
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.75rem; line-height: 1.2; } /* ~28px */
+}
