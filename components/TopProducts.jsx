@@ -31,7 +31,7 @@ export default function TopProducts() {
   return (
     <section className="relative mt-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-extrabold mb-6 shine-text">
+        <h2 className="sweep text-2xl md:text-3xl font-extrabold mb-6 shine-text">
           Legnépszerűbb névre szóló ajándékaink
         </h2>
 
