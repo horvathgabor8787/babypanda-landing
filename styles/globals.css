@@ -251,3 +251,28 @@ body { @apply bg-neutral-950 text-neutral-100; }
   opacity: .24;
   filter: drop-shadow(0 6px 16px rgba(225,164,239,0.22));
 }
+/* Lágyabb, babásabb háttérátmenet */
+.theme-rose {
+  background: radial-gradient(ellipse at 30% -10%, #f7d4dc 0%, #e4a1af 45%, #e09aa8 100%);
+}
+
+/* Kártyák picit világosabb üveg-hatásban, jobb olvashatósággal */
+.theme-rose .holo-border::before { opacity: .35; }
+.theme-rose .glass,
+.theme-rose .glow-card { background: rgba(255,255,255,.35); border-color: rgba(255,255,255,.45); }
+
+/* Grid vonalak világosabbra */
+.theme-rose .bg-grid::after{
+  background-image:
+    linear-gradient(#00000010 1px, transparent 1px),
+    linear-gradient(90deg, #00000010 1px, transparent 1px);
+}
+
+/* CTA-k rózsaszínen még határozottabban ugranak ki */
+.theme-rose .btn-primary {
+  background:#111 !important;
+  color:#E1A4EF !important;
+  border-color:#E1A4EF !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+.theme-rose .btn-primary:hover { transform: translateY(-1px) scale(1.03); }
