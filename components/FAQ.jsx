@@ -23,7 +23,7 @@ export default function FAQ() {
   const [open, setOpen] = useState(null);
   return (
     <section className="relative mt-16">
-      <h2 className="sweep text-2xl md:text-3xl font-extrabold shine-text">
+      <h2 className="shine-text text-2xl md:text-3xl font-extrabold shine-text">
     Gyakori kérdések
   </h2>
       <div className="divide-y divide-white/10">
