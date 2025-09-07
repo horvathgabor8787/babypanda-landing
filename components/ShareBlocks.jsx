@@ -18,6 +18,8 @@ export default function ShareBlocks({ shareUrl, pinterestMedia, text = "Nézd me
     <section className="relative mt-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="title-wave wave-animate text-2xl md:text-3xl font-extrabold mb-6 shine-text">
+          Oszd meg a varázslatot
+        </h2>
 
         <div className="grid gap-3 sm:grid-cols-2">
           <a className="btn-primary" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlUtm)}`} target="_blank" rel="noopener noreferrer">Facebook poszt</a>
