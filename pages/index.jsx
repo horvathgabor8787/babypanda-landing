@@ -59,7 +59,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen theme-rose">
       <Head>
         <title>Baby Panda – Névre szóló, egyedi babaajándékok</title>
         <meta
