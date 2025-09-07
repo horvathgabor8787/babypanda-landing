@@ -101,10 +101,12 @@ export default function Home() {
               <span className="text-accent hidden sm:block">Holografikus console</span>
             </div>
             <iframe
+             <iframe
               src="https://nevvarazs.babypanda.hu"
               title="Baby Panda – Névvarázs Kalkulátor"
-              className="w-full"
-              style={{ height: "75vh", minHeight: 520, background: "linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))" }}
+              className="w-full calc-frame"
+               style={{ background: "linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))" }}
+          /> 
             />
           </div>
         </div>
