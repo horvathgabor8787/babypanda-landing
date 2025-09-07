@@ -134,3 +134,24 @@ body { @apply bg-neutral-950 text-neutral-100; }
 @media (max-width: 360px) {
   .hero-title { font-size: 1.75rem; line-height: 1.2; } /* ~28px */
 }
+/* === Background stickers layer === */
+.sticker-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0; /* a tartalom (z-10) alá kerül */
+}
+.sticker {
+  position: absolute;
+  opacity: .28; /* finom, nem tolakodó */
+}
+
+/* Animációk a lágy lebegéshez */
+@keyframes float_slow { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+@keyframes sway_slow  { 0%,100% { transform: rotate(-3deg) } 50% { transform: rotate(3deg) } }
+
+.float-slow { animation: float_slow 8s ease-in-out infinite; }
+.sway-slower { animation: sway_slow 12s ease-in-out infinite; }
+
+/* Már létező pulse-soft animációra hivatkozunk; ha szeretnéd, erősítsd: */
+/* .pulse-soft { animation: pulse-soft 4s ease-in-out infinite; } */
