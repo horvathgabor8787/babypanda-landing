@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // A landing mostantól aloldalként fut: https://babypanda.hu/babaajandek
+  basePath: '/babaajandek',
+  trailingSlash: false,
+
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'happybabysss.myshoprenter.hu' },
@@ -9,4 +13,5 @@ const nextConfig = {
     ]
   }
 };
+
 module.exports = nextConfig;
